@@ -26,6 +26,7 @@ system-component based architectures by reducing the apparent coupling between o
 - Collisions are handled via a delegate object conforming to `MXContactListenerDelegate`.
 - Length is measured in points rather than Box2D meters. Angles are in degrees, rather than Box2D radians.
 Mass is still measured in kilograms.
+- MXPhysics is not yet a complete wrapper!
 
 ## License
 
