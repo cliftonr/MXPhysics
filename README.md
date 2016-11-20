@@ -16,17 +16,15 @@ pod 'MXPhysics', :git => 'https://github.com/cliftonr/MXPhysics.git'
 
 ## Overview
 
-Though the underlying Box2D functionality is unchanged, `MXPhysics` attempts to improve the interface for 
+Though the underlying Box2D functionality is unchanged, MXPhysics attempts to improve the interface for 
 system-component based architectures by reducing the apparent coupling between objects.
 
 - Worlds, bodies and fixtures may be created independently of one another.
-- Fixtures may be associated with bodies, and bodies may be associated with worlds after they are initialized.
-- At any time, fixtures may be removed from bodies, and bodies may be removed from worlds.
-    - However, fixtures and bodies may not *yet* be added during a time-step.
-- Collisions are handled via a delegate object conforming to `MXContactListenerDelegate`.
-- Length is measured in points rather than Box2D meters. Angles are in degrees, rather than Box2D radians.
-Mass is still measured in kilograms.
-- MXPhysics is not yet a complete wrapper!
+- After initialization, fixtures may be associated with bodies, and bodies with worlds.
+- Even during a time-step, fixtures may be dissociated from bodies, and bodies from worlds.
+- Collisions are handled by a delegate conforming to `MXContactListenerDelegate`.
+- Length is measured in screen points rather than Box2D meters. Angles are in degrees, rather than Box2D radians. Mass is still measured in kilograms.
+- MXPhysics is not yet a complete wrapper. Feel free to submit a feature request or PR.
 
 ## License
 
